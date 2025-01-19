@@ -8,19 +8,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-<style>
-    img{
-        width: 1rem;
-        height: 1rem;
-    }
-    .input1{
-        width: 2.4rem;
-    }
-    .meinz{
-        width: 100%;
-        height: 20rem;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 
 <body class="pt-5 pb-5 container">
 
@@ -30,16 +18,16 @@
         </div>
 
         <div class="border border-primary rounded-3 d-flex flex-row bg-light shadow justify-content-around">
-            <button class="btn btn-light bold"><img src="type-bold.svg" alt=""></button>
-            <button class="btn btn-light italic"><img src="type-italic.svg" alt=""></button>
-            <button class="btn btn-light unter"><img src="type-underline.svg" alt=""></button>
-            <button class="btn btn-light unlist"><img src="list-ul.svg" alt=""></button>
-            <button class="btn btn-light orlist"><img src="list-ol.svg" alt=""></button>
-            <button class="btn btn-light back"><img src="skip-backward-circle-fill.svg" alt=""></button>
-            <button class="btn btn-light front"><img src="skip-forward-circle-fill.svg" alt=""></button>
-            <button class="btn btn-light alignl"><img src="justify-left.svg" alt=""></button>
-            <button class="btn btn-light alignc"><img src="justify.svg" alt=""></button>
-            <button class="btn btn-light alignr"><img src="justify-right.svg" alt=""></button>
+            <button class="btn btn-light bold"><img src="img assets/type-bold.svg" alt=""></button>
+            <button class="btn btn-light italic"><img src="img assets/type-italic.svg" alt=""></button>
+            <button class="btn btn-light unter"><img src="img assets/type-underline.svg" alt=""></button>
+            <button class="btn btn-light unlist"><img src="img assets/list-ul.svg" alt=""></button>
+            <button class="btn btn-light orlist"><img src="img assets/list-ol.svg" alt=""></button>
+            <button class="btn btn-light back"><img src="img assets/skip-backward-circle-fill.svg" alt=""></button>
+            <button class="btn btn-light front"><img src="img assets/skip-forward-circle-fill.svg" alt=""></button>
+            <button class="btn btn-light alignl"><img src="img assets/justify-left.svg" alt=""></button>
+            <button class="btn btn-light alignc"><img src="img assets/justify.svg" alt=""></button>
+            <button class="btn btn-light alignr"><img src="img assets/justify-right.svg" alt=""></button>
             <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Size</button>
                 <ul class="dropdown-menu">
@@ -60,12 +48,10 @@
                 </ul>
             </div>
             <input type="color" class="form-control form-control-color input1">
-            <button class="btn btn-light"><img src="dark-mode-svgrepo-com.svg" alt=""></button>
+            <button class="btn btn-light"><img src="img assets/dark-mode-svgrepo-com.svg" alt=""></button>
         </div>
 
-        <div class="notepad mt-5">
-            <div type="text" class="border border-primary rounded-3 shadow meinz" contenteditable="true" placeholder="Start typing here......"></div>
-        </div>
+        <div type="text" class="mt-5 border border-primary rounded-3 shadow meinz" contenteditable="true" placeholder="Start typing here......"></div>
 
         <div class="d-flex flex-row justify-content-center mt-4">
         <p class="border border-primary rounded-pill bg-light shadow p-2"> Word count : 0</p>
@@ -75,7 +61,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="tx.js"></script>
+<script src="script.js"></script>
 
 </body>
 
