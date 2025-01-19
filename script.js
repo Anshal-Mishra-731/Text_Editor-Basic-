@@ -148,7 +148,7 @@ document.querySelector('.gaat').addEventListener('click', (e) => {
                 <button class="btn btn-secondary modes"><img src="img assets/light-mode-svgrepo-com.svg" alt=""></button>
             </div>
 
-            <div type="text" class="mt-5 border border-primary rounded-3 bg-dark shadow meinz" contenteditable="true" placeholder="Start typing here......"></div>
+            <div type="text" class="mt-5 border border-primary rounded-3 bg-dark shadow text-white meinz" contenteditable="true" placeholder="Start typing here......"></div>
 
             <div class="d-flex flex-row justify-content-center mt-4">
             <p class="border border-primary rounded-pill bg-dark text-white shadow p-2"> Word count : 0</p>
