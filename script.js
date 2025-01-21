@@ -1,4 +1,9 @@
-document.designMode = "on"; 
+document.querySelector('.meinz').addEventListener('keydown', function (event) {
+    if (event.key === "Enter") { 
+        document.execCommand('insertHTML', false, '<br>');
+    }
+});
+
 function applyEx(action){ 
     document.execCommand(action, false, null);
 }
