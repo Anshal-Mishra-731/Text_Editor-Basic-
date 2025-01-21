@@ -130,7 +130,6 @@ function dyalert(type, message){
     document.body.appendChild(alert);
 
     setTimeout(() => {
-        alert.classList.remove('show');
         alert.addEventListener('transitionend', () => alert.remove());
     }, 3500)
 
@@ -154,7 +153,6 @@ function dyalert(type, message){
     document.body.appendChild(alert);
 
     setTimeout(() => {
-        alert.classList.remove('show');
         alert.addEventListener('transitionend', () => alert.remove());
     }, 3500)
 
