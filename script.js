@@ -168,7 +168,7 @@ function dyalert(type, message){
 
     setTimeout(() => {
         alert.addEventListener('transitionend', () => alert.remove());
-    }, 3500)
+    }, 1500)
 
 }
 
