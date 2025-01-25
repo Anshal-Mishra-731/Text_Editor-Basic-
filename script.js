@@ -199,5 +199,32 @@ items.forEach(item => {
     })
 })
 
-
-
+const fontMapping = {
+    "oswald-textO": "Oswald",
+    "smooch-sans-textSS": "Smooch Sans",
+    "playfair-display-textPD": "Playfair Display",
+    "sixtyfour-convergence-textSC": "Sixtyfour Convergence",
+    "atma-medium": "Atma",
+    "nabla-textN": "Nabla",
+    "honk-textH": "Honk",
+    "kalnia-glaze-textKG": "Kalnia Glaze"
+};
+items2 = document.querySelectorAll('#text-font-div #text-font'); 
+items2.forEach(item => {
+    item.addEventListener('click', function (e) {
+        selected = window.getSelection(); 
+        if(selected.rangeCount > 0 && !(selected.isCollapsed)){
+            e.preventDefault(); 
+            selectedFont = this.getAttribute('data-font');
+            execFont = fontMapping[selectedFont];  
+            document.execCommand('fontName', false, execFont); 
+        }
+        else{
+            e.preventDefault(); 
+            selectedFont = this.getAttribute('data-font');
+            document.querySelector('.meinz').classList.remove("oswald-textO", "smooch-sans-textSS", "playfair-display-textPD", 
+                "sixtyfour-convergence-textSC", "atma-medium", "nabla-textN", "honk-textH", "kalnia-glaze-textKG") 
+            document.querySelector('.meinz').classList.add(selectedFont); 
+        }
+    })
+})
