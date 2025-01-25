@@ -47,6 +47,17 @@ document.querySelector('.unter').addEventListener('click', () => {
     }
 })
 
+document.querySelector('.cinput').addEventListener('input', () => {
+    SelectedColour = document.querySelector('.cinput').value; 
+    selection = window.getSelection(); 
+    if(selection.rangeCount > 0 && !(selection.isCollapsed)){
+        document.execCommand('foreColor', false, SelectedColour); 
+    }
+    else{
+        document.querySelector('.meinz').style.color = SelectedColour;
+    } 
+})
+
 let alignl_true = false; 
 let alignc_true = false; 
 let alignr_true = false; 
@@ -127,7 +138,6 @@ document.querySelector('.back').addEventListener('click', () => {
 function dyalert(type, message){
     alert = document.createElement('div');
     alert.className = `alert alert-${type} alert-dismissible fade show dynamic-alert`;
-    alert.role = 'alert';
     alert.innerHTML = `
     ${message}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`; 
@@ -136,7 +146,7 @@ function dyalert(type, message){
 
     setTimeout(() => {
         alert.addEventListener('transitionend', () => alert.remove());
-    }, 3500)
+    }, 1500)
 
 }
 
@@ -150,7 +160,6 @@ document.querySelector('.front').addEventListener('click', () => {
 function dyalert(type, message){
     alert = document.createElement('div');
     alert.className = `alert alert-${type} alert-dismissible fade show dynamic-alert`;
-    alert.role = 'alert';
     alert.innerHTML = `
     ${message}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`; 
@@ -162,5 +171,33 @@ function dyalert(type, message){
     }, 3500)
 
 }
+
+const sizeMap = {
+    "10px": "1",
+    "13px": "2",
+    "16px": "3", 
+    "18px": "4",
+    "24px": "5",
+    "32px": "6",
+    "48px": "7"
+};
+items = document.querySelectorAll('#text-size-div #text-size'); 
+items.forEach(item => {
+    item.addEventListener('click', function (e) {
+        selected = window.getSelection(); 
+        if(selected.rangeCount > 0 && !(selected.isCollapsed)){
+            e.preventDefault(); 
+            selectedSize = this.getAttribute('data-size');
+            execSize = sizeMap[selectedSize]; 
+            document.execCommand('fontSize', false, execSize); 
+        }
+        else{
+            e.preventDefault();
+            selectedSize = this.getAttribute('data-size'); 
+            document.querySelector('.meinz').style.fontSize = selectedSize; 
+        }
+    })
+})
+
 
 

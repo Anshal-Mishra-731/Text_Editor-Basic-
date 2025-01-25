@@ -10,6 +10,10 @@
 
 <link rel="stylesheet" href="style.css">
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Honk&family=Kalnia+Glaze:wght@100..700&family=Nabla&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IN:wght@100..400&family=Sixtyfour+Convergence&family=Smooch+Sans:wght@100..900&display=swap');
+</style>
+
 <body class="pt-5 pb-5 container gaat">
 
     <div>
@@ -21,6 +25,7 @@
             <button class="btn btn-light bold"><img src="img assets/type-bold.svg" alt=""></button>
             <button class="btn btn-light italic"><img src="img assets/type-italic.svg" alt=""></button>
             <button class="btn btn-light unter"><img src="img assets/type-underline.svg" alt=""></button>
+            <input type="color" class="form-control form-control-color cinput">
             <button class="btn btn-light unlist"><img src="img assets/list-ul.svg" alt=""></button>
             <button class="btn btn-light orlist"><img src="img assets/list-ol.svg" alt=""></button>
             <button class="btn btn-light back"><img src="img assets/skip-backward-circle-fill.svg" alt=""></button>
@@ -30,24 +35,32 @@
             <button class="btn btn-light alignr"><img src="img assets/justify-right.svg" alt=""></button>
             <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Size</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="">1</a></li>
-                    <li><a class="dropdown-item" href="">2</a></li>
-                    <li><a class="dropdown-item" href="">3</a></li>
-                    <li><a class="dropdown-item" href="">4</a></li>
-                    <li><a class="dropdown-item" href="">5</a></li>
+                <ul class="dropdown-menu" id="text-size-div">
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="10px">1</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="13px">2</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="16px">3</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="18px">4</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="24px">5</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="32px">6</a></li>
+                    <li><a class="dropdown-item" id="text-size" href="" data-size="48px">7</a></li>
                 </ul>
             </div>
+
             <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Font</button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="">excommunication</a></li>
-                    <li><a class="dropdown-item" href="">excommunication</a></li>
-                    <li><a class="dropdown-item" href="">excommunication</a></li>
-                    <li><a class="dropdown-item" href="">excommunication</a></li>
+                    <li><a class="dropdown-item" href="">Political</a></li>
+                    <li><a class="dropdown-item" href="">Cursive</a></li>
+                    <li><a class="dropdown-item" href="">Technical</a></li>
+                    <li><a class="dropdown-item" href="">Aesthetic</a></li>
+                    <li><a class="dropdown-item" href="">Retro</a></li>
+                    <li><a class="dropdown-item" href="">Playful</a></li>
+                    <li><a class="dropdown-item" href="">Sitcom</a></li>
+                    <li><a class="dropdown-item" href="">Game</a></li>
+                    <li><a class="dropdown-item" href="">Glaze</a></li>
                 </ul>
             </div>
-            <input type="color" class="form-control form-control-color input1">
+
             <button class="btn btn-light modes"><img src="img assets/dark-mode-svgrepo-com.svg" alt=""></button>
         </div>
 

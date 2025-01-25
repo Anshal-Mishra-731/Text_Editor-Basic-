@@ -2,10 +2,78 @@ img{
     width: 1rem;
     height: 1rem;
 }
-.input1{
+.cinput{
     width: 2.4rem;
 }
 .meinz{
     width: 100%;
     height: 20rem;
 }
+
+.oswald-textO {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+  }
+
+  .smooch-sans-textSS {
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+  }
+
+  .playfair-display-textPD {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+  }
+
+  .sixtyfour-convergence-textSC {
+    font-family: "Sixtyfour Convergence", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0,
+      "XELA" 0,
+      "YELA" 0;
+  }
+
+  .atma-medium {
+    font-family: "Atma", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .nabla-textN {
+    font-family: "Nabla", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+  }
+
+  .honk-textH {
+    font-family: "Honk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+  }
+
+  .kalnia-glaze-textKG {
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
