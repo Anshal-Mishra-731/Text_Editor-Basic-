@@ -77,3 +77,7 @@ img{
     font-variation-settings:
       "wdth" 100;
   }
+
+  .cinput{
+    border: none !important;
+  }

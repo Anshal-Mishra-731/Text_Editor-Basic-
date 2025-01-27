@@ -228,3 +228,47 @@ items2.forEach(item => {
         }
     })
 })
+
+dark_mode = false; 
+document.querySelector('.modes').addEventListener('click', function () {
+    if(!dark_mode){
+        document.querySelector('.modes').innerHTML = `<img src="img assets/light-mode-svgrepo-com.svg" alt="">`
+        document.querySelector('.body').classList.add("bg-dark", "text-white");
+        document.querySelector('.te').classList.remove("text-black"); 
+        document.querySelector('.te').classList.add("text-white");
+        document.querySelector('.panel').classList.add("bg-secondary");
+        document.querySelectorAll('.btn').forEach((btn) => {
+            btn.classList.remove("btn-light");
+            btn.classList.add("btn-secondary");
+        }) 
+        document.querySelector('.cinput').classList.remove("bg-light")
+        document.querySelector('.cinput').classList.add("bg-secondary"); 
+        document.querySelector('.cinput').value = "#ffffff"; 
+        document.querySelector('.wc').classList.add("text-white");
+        dark_mode = !(dark_mode); 
+    }
+    else{
+        document.querySelector('.modes').innerHTML = `<img src="img assets/dark-mode-svgrepo-com.svg" alt="">`
+        document.querySelector('.body').classList.remove("bg-dark", "text-white");
+        document.querySelector('.te').classList.add("text-black"); 
+        document.querySelector('.te').classList.remove("text-white");
+        document.querySelector('.panel').classList.remove("bg-secondary");
+        document.querySelectorAll('.btn').forEach((btn) => {
+            btn.classList.add("btn-light");
+            btn.classList.remove("btn-secondary");
+        }) 
+        document.querySelector('.cinput').classList.add("bg-light")
+        document.querySelector('.cinput').classList.remove("bg-secondary"); 
+        document.querySelector('.cinput').value = "#000000"; 
+        document.querySelector('.wc').classList.remove("text-white");
+        dark_mode = !(dark_mode);  
+    }
+})
+
+function UpdateWC(){
+    text = document.querySelector('.meinz').textContent; 
+    words = text.split(/\s+/); 
+    words = words.filter(word => (word.length > 0)); 
+    document.querySelector('.wc').innerHTML = `Word count : ${words.length}`; 
+}
+document.querySelector('.meinz').addEventListener('input', UpdateWC); 
