@@ -1,9 +1,3 @@
-document.querySelector('.meinz').addEventListener('keydown', function (event) {
-    if (event.key === "Enter") { 
-        document.execCommand('insertHTML', false, '<br>');
-    }
-});
-
 function applyEx(action){ 
     document.execCommand(action, false, null);
 }
@@ -237,7 +231,7 @@ document.querySelector('.modes').addEventListener('click', function () {
         document.querySelector('.te').classList.remove("text-black"); 
         document.querySelector('.te').classList.add("text-white");
         document.querySelector('.panel').classList.add("bg-secondary");
-        document.querySelectorAll('.btn').forEach((btn) => {
+        document.querySelectorAll('.btn2').forEach((btn) => {
             btn.classList.remove("btn-light");
             btn.classList.add("btn-secondary");
         }) 
@@ -245,6 +239,7 @@ document.querySelector('.modes').addEventListener('click', function () {
         document.querySelector('.cinput').classList.add("bg-secondary"); 
         document.querySelector('.cinput').value = "#ffffff"; 
         document.querySelector('.wc').classList.add("text-white");
+        document.querySelector('.vtt').classList.add("text-white");  
         dark_mode = !(dark_mode); 
     }
     else{
@@ -253,17 +248,19 @@ document.querySelector('.modes').addEventListener('click', function () {
         document.querySelector('.te').classList.add("text-black"); 
         document.querySelector('.te').classList.remove("text-white");
         document.querySelector('.panel').classList.remove("bg-secondary");
-        document.querySelectorAll('.btn').forEach((btn) => {
+        document.querySelectorAll('.btn2').forEach((btn) => {
             btn.classList.add("btn-light");
-            btn.classList.remove("btn-secondary");
+            btn.classList.remove("btn-secondary");  
         }) 
         document.querySelector('.cinput').classList.add("bg-light")
         document.querySelector('.cinput').classList.remove("bg-secondary"); 
         document.querySelector('.cinput').value = "#000000"; 
         document.querySelector('.wc').classList.remove("text-white");
+        document.querySelector('.vtt').classList.remove("text-white");
         dark_mode = !(dark_mode);  
     }
 })
+
 
 function UpdateWC(){
     text = document.querySelector('.meinz').textContent; 
@@ -271,4 +268,30 @@ function UpdateWC(){
     words = words.filter(word => (word.length > 0)); 
     document.querySelector('.wc').innerHTML = `Word count : ${words.length}`; 
 }
-document.querySelector('.meinz').addEventListener('input', UpdateWC); 
+document.querySelector('.meinz').addEventListener('input', UpdateWC); ; 
+setInterval(UpdateWC, 500); 
+
+function speech(){
+    notepad = document.querySelector('.meinz');
+    karm = document.querySelector('.vtt'); 
+
+    SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+
+    recognition.onstart = function(){
+        karm.innerHTML = "Processing..."; 
+    }
+    recognition.onspeechend = function(){
+        karm.innerHTML = "START 🎙️"; 
+        recognition.stop();
+    }
+
+    recognition.onresult = function (e){
+        transcriptos = e.results[0][0].transcript;
+        notepad.textContent += transcriptos; 
+    }
+
+    recognition.start();
+}
+document.querySelector('.vtt').addEventListener('click', speech); 
+
