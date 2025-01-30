@@ -239,7 +239,8 @@ document.querySelector('.modes').addEventListener('click', function () {
         document.querySelector('.cinput').classList.add("bg-secondary"); 
         document.querySelector('.cinput').value = "#ffffff"; 
         document.querySelector('.wc').classList.add("text-white");
-        document.querySelector('.vtt').classList.add("text-white");  
+        document.querySelector('.vtt').classList.add("text-white");
+        document.querySelector('.meinz').classList.add('meinz2'); 
         dark_mode = !(dark_mode); 
     }
     else{
@@ -257,6 +258,7 @@ document.querySelector('.modes').addEventListener('click', function () {
         document.querySelector('.cinput').value = "#000000"; 
         document.querySelector('.wc').classList.remove("text-white");
         document.querySelector('.vtt').classList.remove("text-white");
+        document.querySelector('.meinz').classList.remove('meinz2');
         dark_mode = !(dark_mode);  
     }
 })
